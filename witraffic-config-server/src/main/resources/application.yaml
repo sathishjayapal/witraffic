@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: witraffic-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+server:
+  port: 8888
