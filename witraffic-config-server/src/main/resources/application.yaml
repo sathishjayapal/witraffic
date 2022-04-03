@@ -5,6 +5,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sathishjayapal/witraffic/tree/main/jubilant-memory
+          uri: https://github.com/sathishjayapal/witraffic
 server:
   port: 8888
