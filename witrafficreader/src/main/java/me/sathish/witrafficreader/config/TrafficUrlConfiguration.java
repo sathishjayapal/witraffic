@@ -1,18 +1,14 @@
-package me.sathish.witrafficlimitservice.bean;
+package me.sathish.witrafficreader.config;
 
-public class Limits {
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties("witraffic-url")
+public class TrafficUrlConfiguration {
     private String trafficURL;
     private String alertsURL;
     private String winterRoadConditionsURL;
-
-    public Limits() {
-    }
-
-    public Limits(String trafficURL, String alertsURL, String winterRoadConditionsURL) {
-        this.trafficURL = trafficURL;
-        this.alertsURL = alertsURL;
-        this.winterRoadConditionsURL = winterRoadConditionsURL;
-    }
 
     public String getTrafficURL() {
         return trafficURL;
