@@ -16,4 +16,4 @@ steps:
     containerRegistry: 'Docker'
     repository: 'sathishjatdot'
     command: 'buildAndPush'
-    Dockerfile: '**/witrafficreader/Dockerfile'
+    Dockerfile: '/witrafficreader/Dockerfile'
