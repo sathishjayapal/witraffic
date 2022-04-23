@@ -1,6 +1,6 @@
 spring:
   config:
-    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
+    import: optional:configserver:${CONFIG_SERVER_URL:http://20.124.167.175:8888/}
   application:
     name: witraffic-url
   devtools:
@@ -8,7 +8,7 @@ spring:
       port: 35760
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://20.124.167.175:8888
       profile: dev
   jpa:
     show-sql: true
