@@ -11,6 +11,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'witrafficreader/pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
