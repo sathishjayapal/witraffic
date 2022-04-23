@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
+  application:
+    name: wi-traffic-alerts-url # this application name should match the properties file in config server.
+  devtools:
+    livereload:
+      port: 35791
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+importfile: /Users/skminfotech/IdeaProjects/witraffic/wi-traffic-alerts/src/test/resources/sample.json
+mydaatakey: DONOTBOTHER

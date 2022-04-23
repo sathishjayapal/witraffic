@@ -7,6 +7,5 @@ spring:
         git:
           uri: https://github.com/sathishjayapal/jubilant-memory
       profile: dev
-
 server:
   port: 8888

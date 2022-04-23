@@ -1,4 +1,4 @@
-package me.sathish.witrafficreader.bean;
+package me.sathish.witrafficreader.core.bean;
 
 public class TrafficInformation {
     String roadwayName;

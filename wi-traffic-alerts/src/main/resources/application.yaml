@@ -1,22 +1,41 @@
-
 spring:
   config:
+    activate:
+      on-profile: dev
     import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
   application:
-    name: wi-traffic-alerts
+    name: wi-traffic-alerts-url # this application name should match the properties file in config server.
   devtools:
     livereload:
-      port: 8005
+      port: 35791
   cloud:
     config:
       uri: http://localhost:8888
       profile: dev
   jpa:
     show-sql: true
+    generate-ddl: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+  sql:
+    init:
+      mode: embedded
+      continue-on-error: true
   datasource:
     url: jdbc:h2:mem:testdb
   h2:
     console:
       enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    info:
+      enabled: true
 server:
   port: 8001
+importfile: /Users/skminfotech/IdeaProjects/witraffic/wi-traffic-alerts/src/main/resources/sample.json
+mydaatakey: DONOTBOTHER

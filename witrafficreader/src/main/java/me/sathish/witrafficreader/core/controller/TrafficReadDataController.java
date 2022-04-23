@@ -1,8 +1,8 @@
-package me.sathish.witrafficreader.controller;
+package me.sathish.witrafficreader.core.controller;
 
-import me.sathish.witrafficreader.bean.TrafficInformation;
-import me.sathish.witrafficreader.config.TrafficUrlConfiguration;
-import me.sathish.witrafficreader.service.TrafficUrlParserService;
+import me.sathish.witrafficreader.core.bean.TrafficInformation;
+import me.sathish.witrafficreader.core.config.TrafficUrlConfiguration;
+import me.sathish.witrafficreader.core.service.TrafficUrlParserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
