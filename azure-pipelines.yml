@@ -20,7 +20,7 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: falsecd ..
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
