@@ -1,6 +1,7 @@
+
 spring:
   config:
-    import: optional:configserver:${CONFIG_SERVER_URL:http://20.124.167.175:8888/}
+    import: optional:configserver:${CONFIG_SERVER_URL:http://sathishproject-config-server.eastus.azurecontainer.io:8888/}
   application:
     name: witraffic-url
   devtools:
@@ -8,7 +9,7 @@ spring:
       port: 35760
   cloud:
     config:
-      uri: http://20.124.167.175:8888
+      uri: http://sathishproject-config-server.eastus.azurecontainer.io:8888
       profile: dev
   jpa:
     show-sql: true
@@ -33,3 +34,5 @@ management:
   endpoint:
     info:
       enabled: true
+server:
+  port: 8085

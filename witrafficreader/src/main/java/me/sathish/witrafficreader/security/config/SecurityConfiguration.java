@@ -15,8 +15,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.firewall.HttpFirewall;
 import org.springframework.security.web.firewall.StrictHttpFirewall;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @EnableWebSecurity
@@ -49,6 +51,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         allowedMethods.add("PUT");
         allowedMethods.add("DELETE");
         CorsConfiguration cors = new CorsConfiguration();
+        cors.applyPermitDefaultValues();
         cors.setAllowedMethods(allowedMethods);
         http.cors().configurationSource(request -> cors.applyPermitDefaultValues());
         http.csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
